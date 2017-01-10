@@ -1,0 +1,30 @@
+.container{
+	background-color: gray;
+	overflow:auto;
+	text-align: center;
+}
+
+.center{
+	width:35%;
+	height: 150px;
+	background-color: pink;
+	margin: auto;
+}
+
+.column1{
+	width: 12.2%;
+	height: 700px;
+	background-color: yellow;
+	float:right;
+	margin-right: 5px;
+	overflow:auto;
+}
+
+.columnright{
+	width: 12%;
+	height: 700px;
+	background-color: yellow;
+	float:left;
+	overflow:auto;
+	;
+}
