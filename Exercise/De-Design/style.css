@@ -19,19 +19,6 @@ body {
   text-transform: uppercase;
 }
 
-#nav {
-  width: 100%;
-  float: right;
-  margin: 0 0 3em 0;
-  padding: 0;
-  list-style: none; }
-
-#nav li {
-  float: right; 
-}
-
-
-
 .navigation {
   background-color: rgba(255, 255, 255, 0.9);
   height: auto;
@@ -136,8 +123,8 @@ body {
   overflow:auto;
 }
 
-img{max-width: 200px;
-    /*max-height:18%;*/
+img{max-width: 18%;
+    max-height:18%;
 }
 
 .container3{
@@ -189,9 +176,6 @@ img{max-width: 200px;
   overflow:auto;
 }
 
-img{max-width: 200px;
-    /*max-height:18%;*/
-}
 
 
 
