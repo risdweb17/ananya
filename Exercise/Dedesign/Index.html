@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<style>*{cursor:none;} </style>
+		<script>
+			function moveCursor(e){
+				c = document.getElementById("cursor");
+				c.style.left = e.pageX+1;
+				c.style.top = e.pageY+1;
+			}
+		</script>
+	</head>
+	<body onmousemove="moveCursor(event);">
+		<img id="cursor" src="cursor.jpg" style="position:fixed; z-index:999;"/>
+
+	</body>
+</html>	
