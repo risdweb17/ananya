@@ -1,7 +1,8 @@
 body {
   background-repeat: repeat;
-  overflow: auto;
+  margin:0;
   text-align: center;
+
 }
 
 .navigation p{
@@ -111,7 +112,7 @@ body {
   margin:  20px;
   padding: 20px;
   background-position: center;
-  background-size: cover;
+  /*background-size: cover;*/
   position: relative;
   text-transform: uppercase;
   top: 130px;
