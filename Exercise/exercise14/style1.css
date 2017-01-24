@@ -1,0 +1,8 @@
+.column1{
+	width: 50%;
+	height: 500px;
+	background-color: yellow;
+	float:right;
+	margin-right: 5px;
+	overflow:auto;
+}
