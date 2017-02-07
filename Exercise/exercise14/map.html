@@ -1,0 +1,204 @@
+
+  <!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Google Maps APIs</title>
+	<style type="text/css">
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#map {
+			width: 60vw;
+			height: 80vh;
+		}
+
+		.mapinfo{
+			line-height: 1.5;
+		}
+
+		p {
+			font-size: 20px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+<!-- 	<h1>This is using Google Maps API</h1> -->
+  	<div id="map"></div>
+  	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgWjuOBXlpTAu4tx1UtWhXUc40ZMt2_DU&callback=initMap"></script>
+  	<script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', initMap);
+
+            function initMap() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 2,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(28.704059, 77.102490), // RISD Design Center
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"featureType":"poi","elementType":"all","stylers":[{"hue":"#000000"},{"saturation":-100},{"lightness":-100},{"visibility":"off"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#000000"},{"saturation":-100},{"lightness":-100},{"visibility":"off"}]},{"featureType":"administrative","elementType":"all","stylers":[{"hue":"#000000"},{"saturation":0},{"lightness":-100},{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"hue":"#000000"},{"saturation":-100},{"lightness":-100},{"visibility":"off"}]},{"featureType":"road.local","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"on"}]},{"featureType":"transit","elementType":"labels","stylers":[{"hue":"#000000"},{"saturation":0},{"lightness":-100},{"visibility":"off"}]},{"featureType":"landscape","elementType":"labels","stylers":[{"hue":"#000000"},{"saturation":-100},{"lightness":-100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#bbbbbb"},{"saturation":-100},{"lightness":26},{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"hue":"#dddddd"},{"saturation":-100},{"lightness":-3},{"visibility":"on"}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+
+    			var delhi = {
+    					info: '<p class="mapinfo">New Delhi</p>',
+                        lat: 28.704059,
+    					long: 77.102490
+    				};
+
+    			var singapore = {
+    					info: '<p class="mapinfo">Singapore</p>',
+    					lat: 1.352083,
+    					long: 103.819836
+    				};
+
+    			var korea = {
+    					info: '<p class="mapinfo">South Korea</p>',
+    					lat:  35.907757,
+    					long: 127.766922
+    				};
+
+                var germany = {
+                        info: '<p class="mapinfo">Berlin</p>',
+                        lat:  52.520007,
+                        long: 13.404954
+                    };
+
+                var norway = {
+                        info: '<p class="mapinfo">Oslo</p>',
+                        lat:  60.472024,
+                        long: 8.468946
+                    };
+
+                var denmark = {
+                        info: '<p class="mapinfo">Copenhagen</p>',
+                        lat:  55.676097,
+                        long: 12.568337
+                    };
+
+                var paris = {
+                        info: '<p class="mapinfo">Paris</p>',
+                        lat:  48.856614,
+                        long: 2.352222
+                    };
+
+                var sweden = {
+                        info: '<p class="mapinfo">Stockholm</p>',
+                        lat:  59.329323,
+                        long: 18.068581
+                    };
+
+                var ny = {
+                        info: '<p class="mapinfo">New York</p>',
+                        lat:  40.712784,
+                        long: -74.005941
+                    };
+
+                var mexico = {
+                        info: '<p class="mapinfo">mexico</p>',
+                        lat:  23.634501,
+                        long: -102.552784
+                    };
+
+                var san = {
+                        info: '<p class="mapinfo">San Fransisco</p>',
+                        lat:  37.774929,
+                        long: -122.419416
+                    };
+
+
+				var locations = [
+			      [delhi.info, delhi.lat, delhi.long, 0],
+			      [singapore.info, singapore.lat, singapore.long, 1],
+			      [korea.info, korea.lat, korea.long, 2],
+                  [germany.info, germany.lat, germany.long, 3],
+                  [norway.info, norway.lat, norway.long, 4],
+                  [denmark.info, denmark.lat, denmark.long, 5],
+                  [paris.info, paris.lat, paris.long, 6],
+                  [sweden.info, sweden.lat, sweden.long, 7],
+                  [ny.info, ny.lat, ny.long, 8],
+                  [mexico.info, mexico.lat, mexico.long, 9],
+                  [san.info, san.lat, san.long, 10]
+
+			    ];
+
+                var infowindow = new google.maps.InfoWindow({});
+
+                var marker, i;
+
+                for (i = 0; i < locations.length; i++) {
+                	marker = new google.maps.Marker({
+                		position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                		map: map
+                	});
+
+                	google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                		return function () {
+                			infowindow.setContent(locations[i][0]);
+                			infowindow.open(map, marker);
+                		}
+                	})(marker, i));
+                }
+            }
+        </script>
+	<!-- <script>
+		var map;
+
+		function initMap() {
+
+			var apple = {
+					info: '<p class="mapinfo">Apples here</p>',
+                    lat: 42.320064,
+					long: -71.363988
+				};
+
+			var banana = {
+					info: '<p class="mapinfo">Bananas here</p>',
+					lat: 42.672686,
+					long: -71.166872
+				};
+
+			
+			var locations = [
+		      [apple.info, apple.lat, apple.long, 0],
+		      [banana.info, banana.lat, banana.long, 1],
+		    ];
+
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom:8,
+				center: new google.maps.LatLng(42.360082, -71.05888),
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			});
+
+
+		}
+
+	</script> -->
+
+</body>
+
+</html>
+

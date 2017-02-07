@@ -1,0 +1,113 @@
+mple.htm
+<!doctype html>
+<html>
+	<head>
+		<title>External Links Example</title>
+	</head>
+	<body>
+		<h1>External Links Example</h1>
+		
+		<div class="newWindow">
+			<p>
+				Only the external links in this section will be affected.
+			</p>
+			
+			<p>
+				The following link are all internal to this domain so they should
+				stay in the same window/tab.
+			</p>
+			
+			<ul>
+				<li><a href="example.htm">Link to this page.</a></li>
+				<li><a href="./example.htm">Link to this page using <code>./</code>.</a></li>
+				<li><a href="/example.htm">Link to this page using <code>/</code>.</a></li>
+				<li><a href="//example.com/example.htm">Link to this page using <code>//</code>.</a></li>
+				<li><a href="http://example.com/example.htm">Link to this page using <code>http://</code>.</a></li>
+				<li><a href="http://example.com/example.htm">Link to this page using <code>http://</code>.</a></li>
+			</ul>
+			
+			<p>
+				The following link are all external to this domain so they should
+				open in a new window/tab.
+			</p>
+			
+			<ul>
+				<li><a href="http://google.com">Link to external using <code>http://</code>.</a></li>
+				<li><a href="https://google.com">Link to external using <code>https://</code>.</a></li>
+				<li><a href="//google.com">Link to external using <code>//</code>.</a></li>
+			</ul>
+			
+			<p>
+				You can also ignore the new window/tab by adding an <code>ignoreExternal</code> class.
+			</p>
+			
+			<ul>
+				<li><a href="http://google.com" class="ignoreExternal">Link to ignored external using <code>http://</code>.</a></li>
+				<li><a href="https://google.com" class="ignoreExternal">Link to ignored external using <code>https://</code>.</a></li>
+				<li><a href="//google.com" class="ignoreExternal">Link to ignored external using <code>//</code>.</a></li>
+			</ul>
+			
+			<p>
+				You can also explicitly open in a new window/tab by adding an <code>isExternal</code> class or a <code>external</code> <code>rel</code> attribute.
+			</p>
+			
+			<ul>
+				<li><a href="example.htm" rel="external">Link to this page.</a></li>
+				<li><a href="./example.htm" class="isExternal">Link to this page using <code>./</code>.</a></li>
+			</ul>
+		</div>
+		
+		<div>
+			<p>
+				Links in this section will open normally.
+			</p>
+			
+			<ul>
+				<li><a href="http://google.com">Link to external using <code>http://</code>.</a></li>
+				<li><a href="https://google.com">Link to external using <code>https://</code>.</a></li>
+				<li><a href="//google.com">Link to external using <code>//</code>.</a></li>
+			</ul>
+		</div>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.js"></script>
+		<script src="jquery.externalLinks.js"></script>
+		<script>
+			// This is the only line you need and should select which area
+			// you want the links to appear be externalized
+			(function($){
+				$(function(){
+					$('.newWindow').externalLinks();
+					
+					// If you want ALL the links to be externalized try this:
+					// $('body').externalLinks();
+				});
+			}(jQuery));
+		</script>
+		
+		<script>
+			// Use this to set what domain it considers local
+			// Will default to the current domain so usually you don't need this
+			jQuery.externalLinks.baseDomain = 'example.com';
+			
+			/**
+			 * the following is just for demonstration to show where the link 
+			 * will open without actually taking you there
+			 */
+			(function($){
+				$(function(){
+					$('a').each(function(){
+						if($(this).data('isExternal') === true) {
+							$('<span />', {
+								html: ' &laquo; Link will open new window/tab'
+							}).css('color', '#090').insertAfter($(this));
+						} else {
+							$('<span />', {
+								html: ' &laquo; Link will open normally'
+							}).css('color', '#009').insertAfter($(this));
+						}
+					});
+				});
+			}(jQuery));
+		</script>
+	</body>
+</html>

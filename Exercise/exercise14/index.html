@@ -1,156 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>De Design</title>
-        <meta name="description" content="a repository for sample code">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        <script src="main.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="animate.css">
-
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <title>De Design</title>
+    <meta content="a repository for sample code" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script src="main.js">
+    </script>
+    <link href="animate.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
 <body>
-    
-<body>
-  
-  <!-- Add an optional button to open the popup -->
-  <button class="my_popup_open">Open popup</button>
-
-  <!-- Add content to the popup -->
-  <div id="my_popup">
-
-    ...popup content...
-
-    <!-- Add an optional button to close the popup -->
-    <button class="my_popup_close">Close</button>
-
-  </div>
-
-  <!-- Include jQuery -->
-  <script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
-
-  <!-- Include jQuery Popup Overlay -->
-  <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
-
-  <script>
-    $(document).ready(function() {
-
-      // Initialize the plugin
-      $('#my_popup').popup();
-
-    });
-  </script>
-
-  <div class="navigation">
- 
-    <ul id="nav">
-      <p> Ananya Vij</p>
-      <li><a href="#">Home</a></li>
-      <li><a href="#two">About</a></li>
-      <li><a href="#one">Portfolio</a></li>
-      <!-- <li><a href="#">Contact</a></li> -->
-    </ul>
-  </div>
-
-  <div id="three" class="content-box">
-    <div class="content-header">
-      <h1>Ananya Vij</h1>
+    <div class="navigation">
+        <ul id="nav">
+            <li class="name">
+                <a href="#slider">Ananya Vij</a>
+            </li>
+           <!--  <li>
+                <a href="#home">Home</a>
+            </li> -->
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li><!-- <li><a href="#">Contact</a></li> -->
+        </ul>
     </div>
 
-    <div id="two" class="content-body">
-      <p> — Ich bin ein Architekt und derzeit verfolgt mein Master-Abschluss in Interior Architecture [+] Adaptive Wiederverwendung von Rhode Island School of Design.</p>
-      <!-- I am an Architect and presently pursuing my master’s degree in Interior Architecture [+] Adaptive Reuse from Rhode Island School of Design -->
-      <br/>
-    </div>
+    <section id="slider">
+        <div><img src="image/project1/1.jpg" alt></div>
+        <div><img src="image/project1/10.jpg" alt></div>
+        <div><img src="image/project1/7.jpg" alt></div>
+        <div><img src="image/project1/9.jpg" alt></div>
+        <div><img src="image/project1/8.jpg" alt></div>
+    </section>
     
 
-
-    <br/>
-
-
+    <section class="content-body" id="about">
+        <h1></h1>
+        <p>— She is an Architect from New Delhi, India and presently pursuing her master’s degree in Interior Architecture [+] Adaptive Reuse from Rhode Island School of Design. In Spring 2017, she will be working on Adaptive Reuse project with Augmented and Virtual Reality. 
+        She can be reached at avij (at) risd (dot) edu</p>
+        <p id="cv"><a href="../exercise7_Responsive Resume/index.html">CV</a></p>
+    </section>
 
     
-    <div id="one" class="container1 ">
-     <ul>
-        <li>
-          <!-- <h3>Project</h3>
-          <h2>I</h2> -->
-        </li>
-        <a href="https://d13yacurqjgara.cloudfront.net/users/348324/screenshots/1794271/architecture.gif"> <img class="zoomin" src="image/2.png"> 
-        </a>
-      
+    <section id="portfolio">
+        <div class="item black">
+            <a href="project1/index.html">
+                <div class="chunk">
+                    <div class="text">
+                        <h3>[ HOUSING HYBRIDS ]</h3>
+                        <h2>2017</h2>
+                    </div>
+                    <img class="zoomin" src="image/project1/13.jpg">
+                </div>
+            </a>
+        </div>
+
+
+        <div class="item coral">
         
-
-    </div>
-
-    <div class="container2">
-      <ul>
-        <li>
-          <!-- <h3>Project</h3>
-          <h2>II</h2> -->
-        </li>
-        <a href="http://acdn.architizer.com/media/146005629537808bd7e28885063.56efed5044503-1_1.gif"> <img class="zoomin" src="image/5.jpg"> 
-        <!-- <img src="image/5.jpg"> -->
-      </ul>
-    </div>
+             <a href="project2/index.html">
+                <div class="chunk">
+                     <div class="text">
+                        <h3>[ BARDO ]</h3>
+                        <h2>2016</h2>
+                    </div>
+                    <img class="zoomin" src="image/project2/1.jpg">
+                </div>
+             </a> 
+        </div>
 
 
-    <div class="container3">
-      <ul>
-        <li>
-         <!--  <h3>Project</h3>
-          <h2>III</h2> -->
-        </li>
-        <a href="https://d13yacurqjgara.cloudfront.net/users/598322/screenshots/2632670/12.-high-cliff600.gif"> <img class="zoomin" src="image/3.png">
-        <!-- <img src="image/3.png"> -->
-      </ul>
-    </div>
-
-<div class="container4">
-     <ul>
-        <li>
-          <!-- <h3>Project</h3>
-          <h2>IV</h2> -->
-        </li>
-        <a href="http://images.adsttc.com/media/images/570c/1070/e58e/ce1a/d000/003c/original/20.-The-Leadenhall-Building600.gif?1460408429"> <img class="zoomin" src="image/6.png">
-        <!-- <img src="image/6.png"> -->
-    </div>
-
-    <div class="container5">
-      <ul>
-        <li>
-        <a href="https://41dcdfcd4dea0e5aba20-931851ca4d0d7cdafe33022cf8264a37.ssl.cf1.rackcdn.com/8835744_20-animated-architectural-landmarks_t549b1cbd.gif"> <img class="zoomin" src="image/7.png">
-         <!--  <h3>Project</h3>
-          <h2>V</h2> -->
-        </li>
+           <div class="item white">
         
-    </div>
-     
-     
+             <a href="project3/index.html">
+                <div class="chunk">
+                     <div class="text">
+                        <h3>[ B.R AMBEDKAR MEMORIAL ]</h3>
+                        <h2>2015</h2>
+                    </div>
+                    <img class="zoomin" src="image/project3/1.jpg">
+                </div>
+             </a> 
+        </div>
 
+
+               <div class="item green">
         
+             <a href="project4/index.html">
+                <div class="chunk">
+                     <div class="text">
+                        <h3>[ BEHIND THE SCENES| MUSEUM ]</h3>
+                        <h2>2016</h2>
+                    </div>
+                    <img class="zoomin" src="image/project4/2.jpg">
+                </div>
+             </a> 
+        </div>
 
-    </div>
 
 
-  </div>
-  
+                <div class="item beige">
+        
+             <a href="project5/index.html">
+                <div class="chunk">
+                     <div class="text">
+                        <h3>[ TRADE CENTER ]</h3>
+                        <h2>2012</h2>
+                    </div>
+                    <img class="zoomin" src="image/project5/1.gif">
+                </div>
+             </a> 
+        </div>
+
+    </section><!-- close portfolio -->
+
+
+    <footer>
+        <div id="contact">
+            <p>[ ADDRESS ]</p>
+            <p>73 Olney Street, Providence, Rhode Island 02906, US</p>
+        </div>
+        <div class="icons">
+
+
+        <a href="https://www.facebook.com/ananya.vij.7"><i aria-hidden="true" class="fa fa-facebook-official fa-2x" style="padding-right: 30px;&gt;"></i></a> 
+
+        <a href="https://www.instagram.com/ananya_vij/?hl=en"><i aria-hidden="true" class="fa fa-instagram fa-2x"></i></a> 
+
+        <a href="map.html"><i aria-hidden="true" class="fa fa-globe fa-2x" style="padding-left: 30px;&gt;"></i></a>        
+        </div>
+
+
+
+
+        <div class="marker">        
+        <p>Copyright &copy; avij@risd.edu | (312) 937-2303</p>
+        </div>
+
+    </footer>
 </body>
 </html>
-
-
-      
-         
-
-
-
-
-
-
-

@@ -1,233 +1,114 @@
-body {
-  background-repeat: repeat;
-  margin:0;
-  text-align: center;
-
-}
-
-.navigation p{
-  display: inline-block;
-  float:left;
-  color: solid black;
-  font-family: 'Roboto', sans-serif;
-  font-style:bold;
-  font-size: 16px;
-  font-weight:bold;
-  word-spacing: .6em;
-  letter-spacing: .5em;
-  padding-left:120px;
-  margin: 20px;
-  text-transform: uppercase;
-}
-
-#nav {
-  width: 100%;
-  float: right;
-  margin: 0 0 3em 0;
-  padding: 0;
-  list-style: none; }
-
-#nav li {
-  float: right; 
-}
+/** {
+  box-sizing: border-box;
+  border: 4px solid black;
+}*/
 
 
+/*.container1{
+	margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}*/
 
-.navigation {
-  background-color: rgba(255, 255, 255, 0.9);
-  height: auto;
-  text-align: right;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 999;
-  width:95%;
-}
-
-.navigation ul {
- text-align:right;
-  padding: 0;
-}
+/*body{
+	background-image: url(http://static3.businessinsider.com/image/55b675ab2acae7c7018ba34e-1200/milky-way-galaxy.jpg)
+	
+}*/
 
 
-.navigation li {
-  color: #666666;
-  display: inline-block;
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  font-weight: 100;
-  letter-spacing: normal;
-  margin: 20px;
-  text-transform: uppercase;
-}
-
-
-
-.content-box {
-  height: 500px;
-  margin: 0 auto;
-  position: relative;
-  top: 220px;
-  width: 90%;
-}
-
-.content-header {
-  background-image:url('image/1.jpg');
-  background-position: center;
+html{
+	height:100%;
+	background: url(http://static3.businessinsider.com/image/55b675ab2acae7c7018ba34e-1200/milky-way-galaxy.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  position: relative;
-  top: -130px;
-  height: 700px;
+	
 }
+ 
 
-.content-body p {
-  margin: 0 auto;
-  text-align:center;
-  width: 70%;
-  color: black;
-  font-family: 'Roboto', sans-serif;
-  font-size: 36px;
-  font-style:bold;
-  font-weight: 600;
-  position:relative;
-  line-height: 50px;
-  letter-spacing: .009em;
-  margin bottom:  200px;
-  /*padding bottom: 1000px;*/
+.box{
+	
+	margin-left:auto;
+	margin-right:auto;
+	max-width: 40%;
+	/*height: 250px;*/
+	/*border: 5px solid black;*/
+	background-color: transparent;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align:center;
 
 }
 
-.content-header h1 {
-  margin: 0 auto;
-  background: transparent;
-  color: black;
-  text-align:center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 70px;
-  font-style:bold;
-  font-weight: 1200;
-  line-height: 200px;
-  letter-spacing: 3em;
-  word-spacing: 0em;
-  margin:  20px;
-  padding: 20px;
-  background-position: center;
-  /*background-size: cover;*/
-  position: relative;
-  text-transform: uppercase;
-  top: 130px;
-  width: 70%;
+.container1 {
+    opacity: .92;
+    /*width: 00px;
+    height:500px;*/
 }
 
-.container2{
-  width:49.5%;
-  height: 500px;
-  background-color: skyblue;
-  float:right;
-  margin-right: 5px;
-  overflow:auto;
+.container1:hover {
+    opacity: 1;
 }
 
-.container1{
-  width:49.5%;
-  height: 500px;
-  background-color: black;
-  float:left;
-  margin-right: 5px;
-  overflow:auto;
+.container1:after {
+	top: -100%;
+	left: 0px;
+	width: 100%;
+	position: absolute;
+	background: white;
+	border-radius: 5px;
+	
+	transform-origin: left bottom;
+	transform: rotateX(90deg);
 }
 
-img{max-width: 200px;
-    /*max-height:18%;*/
+.container1:hover {
+	transform-origin: center bottom;
+	transform: rotateX(-90deg) translateY(100%);
 }
 
-.container3{
-  width:100%;
-  height: 500px;
-  background-color: white;
-  overflow:auto;
-  margin-right: 5px;
-  
+img{
+	max-width: 100%;
+	max-height: 100%;
+	text-align:center;
+	
 }
 
-.container3 h3{
-  color: black;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 100;
-  letter-spacing: 2px;
-  margin: 0;
-  text-transform: uppercase;
+	.container1{
+	transform-style: preserve-3d;
+	width: 200px;
+	margin:auto;
+	margin-top:5px;
+	height: 180px;
+	background-color: transparent;
+	border: 2px solid white;
+	text-align:center;
+/*	margin-left:auto;
+	margin-right:auto;*/
 
-}
 
-.container3 h2{
-   color: black;
-  font-family: 'Roboto', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin: 0;
-  text-transform: uppercase;
 
-}
 
-.container4{
-  width:49.5%;
-  height: 500px;
-  background-color: black;
-  float:left;
-  margin-right: 5px;
-  overflow:auto;
-}
+	/*text-align:center;*/
 
-.container5{
-  width:49.5%;
-  height: 500px;
-  background-color: skyblue;
-  float:right;
-  margin-right: 5px;
-  overflow:auto;
-}
-
-img{max-width: 200px;
-    /*max-height:18%;*/
+/*	position:absolute;*/
+	
 }
 
 
-
-h2 {
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin: 0;
-  text-transform: uppercase;
+.container1 p {
+	color: white;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-size: 30px;
+	text-align: center;
+	font-weight: 10px;
+	
 }
 
-h3 {
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 100;
-  letter-spacing: 2px;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-ul{
-  width:95%;
-}
-
-
-
-.content-box ul {
-  padding: 40px 0px;
-}
-
-
-
-
+	
+	/*display:inline-block;*/
 
 

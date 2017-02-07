@@ -1,0 +1,40 @@
+body {
+    background: white;
+    color: black;
+}
+
+.container {
+    background-color:;
+/*    display: flex;
+    align-items: center;
+    justify-content: center;*/
+    /*height: 30vh;*/
+}
+
+p{
+    padding-left: 1em;
+}
+
+div.list {
+    background: white;
+   /* border: 1px solid #444;*/
+    overflow: hidden;
+    padding: 5px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    float: left;
+    width: 205px;
+    text-align: center;
+}
+
+
+div.list:hover,div.list:active {
+    background: lightgrey;
+    /*border-color: #ccc;*/
+    cursor: pointer
+}
+
+img {
+    width: 200px;
+    margin: 1em;
+}
